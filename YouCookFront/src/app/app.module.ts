@@ -9,6 +9,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { LandingComponent } from './pages/landing/landing.component';
 import {ImageModule} from 'primeng/image';
+import {BadgeModule} from 'primeng/badge';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {ImageModule} from 'primeng/image';
     BrowserModule,
     AppRoutingModule,
     ButtonModule,
-    ImageModule
+    ImageModule,
+    BadgeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
