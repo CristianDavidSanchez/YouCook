@@ -1,4 +1,32 @@
 <p-card>
+    <p-dataView
+    #dv
+    [value]="products"
+    [paginator]="true"
+    [rows]="5"
+    filterBy="name"
+    layout="grid"
+  >
+    <ng-template let-product pTemplate="gridItem">
+      <div class="p-col-12 p-md-4">
+        <div class="product-grid-item card">
+
+          <div class="product-grid-item-content">
+            <img [src]="product.urlImagen" [alt]="product.nombre" width="80%"/>
+            <div class="product-name">{{ product.nombre }}</div>
+            <div class="product-description">{{ product.descripcion }}</div>
+          </div>
+          <div class="product-grid-item-bottom">
+            <p-button
+              label="Agregar"
+              icon="pi pi-plus-circle"
+              (onClick)="handleClick(product)"
+            ></p-button>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </p-dataView>
     <ng-template pTemplate="footer">
         <div class="footer">
             <p-button label="Back" (onClick)="prevPage()" icon="pi pi-angle-left" iconPos="right"></p-button>

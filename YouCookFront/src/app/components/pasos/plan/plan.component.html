@@ -1,10 +1,10 @@
 <p-card>
     <div class="p-grid p-justify-center">
-        <div class="p-col-3">
+        <div class="p-col-2">
             <label for="horizontal">Precio semanal</label>
             <h1>{{personas*recetas*10000|currency:"COP":'symbol-narrow'}}</h1>
         </div>
-        <div class="p-col-2" >
+        <div class="p-col-1" >
             <label for="horizontal">No de personas</label>
             <p-inputNumber [(ngModel)]="personas" [showButtons]="true" buttonLayout="horizontal" inputId="horizontal"
              spinnerMode="horizontal" [step]="1" incrementButtonIcon="pi pi-plus" decrementButtonIcon="pi pi-minus" [size]="5" [min]="1" [max]="5">
