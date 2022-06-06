@@ -1,0 +1,14 @@
+.nav-container{
+    min-height: 6vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background:#e3f8ef ;
+    box-shadow:inset 0px -11px 11px 0px #00968814;
+}
+.nav-buttons{
+    margin-left: 2rem;
+}
+.p-button{
+    font-size: large;
+}
