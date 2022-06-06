@@ -1,0 +1,19 @@
+.footer{
+    display: flex;
+    justify-content:space-between;
+}
+.product-grid-item {
+    margin: .5em;
+    border: 1px solid #dee2e6;
+}
+.product-grid-item-content {
+    margin: 10px;
+    margin-top: 40px;
+    text-align: center;
+}
+.product-grid-item-bottom{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    margin-bottom: 50px;
+}

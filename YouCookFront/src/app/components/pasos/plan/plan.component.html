@@ -1,0 +1,25 @@
+<p-card>
+    <div class="p-grid p-justify-center">
+        <div class="p-col-2">
+            <label for="horizontal">Precio semanal</label>
+            <h1>{{personas*recetas*10000|currency:"COP":'symbol-narrow'}}</h1>
+        </div>
+        <div class="p-col-1" >
+            <label for="horizontal">No de personas</label>
+            <p-inputNumber [(ngModel)]="personas" [showButtons]="true" buttonLayout="horizontal" inputId="horizontal"
+             spinnerMode="horizontal" [step]="1" incrementButtonIcon="pi pi-plus" decrementButtonIcon="pi pi-minus" [size]="5" [min]="1" [max]="5">
+            </p-inputNumber>
+            <label for="horizontal">Recetas semanales</label>
+            <p-inputNumber [(ngModel)]="recetas" [showButtons]="true" buttonLayout="horizontal" inputId="horizontal" 
+            spinnerMode="horizontal" [step]="1" incrementButtonIcon="pi pi-plus" decrementButtonIcon="pi pi-minus" [size]="5" [min]="1" [max]="7">
+            </p-inputNumber>
+        </div>
+    </div>
+    <ng-template pTemplate="footer">
+        <div class="p-grid2">
+            <p-button label="Next" (onClick)="nextPage()" icon="pi pi-angle-right" iconPos="right"></p-button>
+        </div>
+    </ng-template>
+</p-card> 
+
+

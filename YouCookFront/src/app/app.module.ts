@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,16 @@ import { LayoutComponent } from './components/layout/layout.component';
 import { LandingComponent } from './pages/landing/landing.component';
 import {ImageModule} from 'primeng/image';
 import {BadgeModule} from 'primeng/badge';
+import { ProcesoComponent } from './pages/proceso/proceso.component';
+import {StepsModule} from 'primeng/steps';
+import {CardModule} from 'primeng/card';
+import { PlanComponent } from './components/pasos/plan/plan.component';
+import { RecetasComponent } from './components/pasos/recetas/recetas.component';
+import { PagoComponent } from './components/pasos/pago/pago.component';
+import {InputNumberModule} from 'primeng/inputnumber';
+import { FormsModule } from '@angular/forms';
+import {DataViewModule} from 'primeng/dataview';
+
 
 @NgModule({
   declarations: [
@@ -17,14 +28,24 @@ import {BadgeModule} from 'primeng/badge';
     NavComponent,
     FooterComponent,
     LayoutComponent,
-    LandingComponent
+    LandingComponent,
+    ProcesoComponent,
+    PlanComponent,
+    RecetasComponent,
+    PagoComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ButtonModule,
     ImageModule,
-    BadgeModule
+    BadgeModule,
+    StepsModule,
+    CardModule,
+    InputNumberModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    DataViewModule
   ],
   providers: [],
   bootstrap: [AppComponent]
