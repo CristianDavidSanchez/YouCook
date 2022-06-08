@@ -20,6 +20,9 @@ import { PagoComponent } from './components/pasos/pago/pago.component';
 import {InputNumberModule} from 'primeng/inputnumber';
 import { FormsModule } from '@angular/forms';
 import {DataViewModule} from 'primeng/dataview';
+import {InputTextModule} from 'primeng/inputtext';
+
+import {InputMaskModule} from 'primeng/inputmask';
 
 
 @NgModule({
@@ -45,7 +48,9 @@ import {DataViewModule} from 'primeng/dataview';
     InputNumberModule,
     FormsModule,
     BrowserAnimationsModule,
-    DataViewModule
+    DataViewModule,
+    InputTextModule,
+    InputMaskModule
   ],
   providers: [],
   bootstrap: [AppComponent]

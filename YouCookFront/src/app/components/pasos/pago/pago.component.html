@@ -1,1 +1,55 @@
-<p>pago works!</p>
+<p-card>
+    <ng-template pTemplate="title">
+        Información de pago
+    </ng-template>
+    <ng-template pTemplate="subtitle">
+        Ingresa tu Información de pago
+    </ng-template>
+    <div class="p-col-12">
+        <label for="horizontal">Total a facturar</label>
+        <h1>{{totalPedido|currency:"COP":'symbol-narrow'}}</h1>
+    </div>
+    <ng-template pTemplate="content">
+        <div class="p-fluid p-grid">
+            <div class="p-col-3">
+                <label for="class">Nombre Completo</label>
+                <input type="text" required pInputText [(ngModel)]="pedido.nombre"> 
+            </div>
+            <div class="p-col-3">
+                <label for="class">Correo electrónico</label>
+                <input type="text" required pInputText [(ngModel)]="pedido.correo"> 
+            </div>
+            <div class="p-col-6">
+            </div>
+            <div class="p-col-4">
+                <label for="class">Dirección del domicilio</label>
+                <input type="text" required pInputText [(ngModel)]="pedido.direccion"> 
+            </div>
+            <div class="p-col-2">
+                <label for="class">Telefóno</label>
+                <input type="text" required pInputText [(ngModel)]="pedido.telefono"> 
+            </div>
+            <div class="p-col-6">
+
+            </div>
+            <div class="p-col-2">
+                <label id="number" for="lastname">Numero de tarjeta credito</label>
+                <p-inputMask inputId="number" mask="9999-9999-9999-9999" [(ngModel)]="pedido.numTarjeta"></p-inputMask>
+            </div>
+            <div class="p-col-2">
+                <label id="date" for="date">Fecha tarjeta de crédito</label>
+                <p-inputMask inputId="date" mask="99/99" [(ngModel)]="pedido.expiracion"></p-inputMask>
+            </div>
+            <div class="p-col-2">
+                <label for="cvv">CVV</label>
+                <p-inputMask id="cvv" mask="999" [(ngModel)]="pedido.cvv"></p-inputMask>
+            </div>
+        </div>
+    </ng-template>
+    <ng-template pTemplate="footer">
+        <div class="footer">
+            <p-button label="Back" (onClick)="prevPage()" icon="pi pi-angle-left" iconPos="right"></p-button>
+            <p-button label="Confirmar" (onClick)="nextPage()" icon="pi pi-angle-right" iconPos="right"></p-button>
+        </div>
+    </ng-template>
+</p-card>

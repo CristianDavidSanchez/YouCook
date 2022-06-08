@@ -12,11 +12,11 @@ export class ProcesoComponent implements OnInit {
 
   ngOnInit(): void {
     this.items = [{
-          label: 'plan',
+          label: 'Cantidades',
           routerLink: 'plan'
       },
       {
-          label: 'recetas',
+          label: 'Recetas',
           routerLink: 'recetas',
       },
       {
