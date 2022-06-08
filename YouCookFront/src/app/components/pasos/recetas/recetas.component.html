@@ -21,6 +21,7 @@
               label="Agregar"
               icon="pi pi-plus-circle"
               (onClick)="handleClick(product)"
+              [disabled]="buttonblock"
             ></p-button>
           </div>
         </div>
@@ -33,6 +34,10 @@
             <p-button label="Next" (onClick)="nextPage()" icon="pi pi-angle-right" iconPos="right"></p-button>
         </div>
     </ng-template>
+    <div class="p-col-12">
+      <label for="horizontal">Recetas a seleccionar</label>
+      <h1>{{cont2}}</h1>
+  </div>
 </p-card> 
 
 
