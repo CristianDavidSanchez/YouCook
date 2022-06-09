@@ -1,0 +1,63 @@
+<p-card>
+    <ng-template pTemplate="title">
+        Contáctanos
+    </ng-template>
+    <ng-template pTemplate="subtitle">
+        
+    </ng-template>
+    <ng-template pTemplate="content">
+        <div class="p-fluid p-grid">
+            <div class="p-col-2">
+                <h2>Telefono</h2>
+                <p>  3102196856</p>
+            </div>
+            <div class="p-col-3">
+                <label for="class">Nombre Completo</label>
+                <input type="text" required pInputText> 
+            </div>
+            <div class="p-col-3">
+                <label for="class">Número de contacto</label>
+                <input type="text" required pInputText> 
+            </div>
+            <div class="p-col-4">
+            </div>
+            <div class="p-col-2">
+            </div>
+            <div class="p-col-2">
+                <label for="class">Mensaje</label>
+                <textarea pInputTextarea></textarea>
+            </div>
+        </div>
+    </ng-template>
+    <ng-template pTemplate="footer">
+        <div class="footer">
+            <button type="button" pButton pRipple (click)="confirmar()" label="Confirmar" class="ui-button-warning"></button>
+        </div>
+    </ng-template>
+</p-card>
+
+
+<p-toast></p-toast>
+<p-toast position="top-left" key="tl"></p-toast>
+<p-toast position="top-center" key="tc"></p-toast>
+<p-toast position="bottom-center" key="bc"></p-toast>
+
+<p-toast position="bottom-center" key="c" (onClose)="onReject()" [baseZIndex]="5000">
+    <ng-template let-message pTemplate="message">
+        <div class="p-flex p-flex-column" style="flex: 1">
+            <div class="p-text-center">
+                <i class="pi pi-exclamation-triangle" style="font-size: 3rem"></i>
+                <h4>{{message.summary}}</h4>
+                <p>{{message.detail}}</p>
+            </div>
+            <div class="p-grid p-fluid">
+                <div class="p-col-6">
+                    <button type="button" pButton (click)="onConfirm()" label="Yes" class="p-button-success"></button>
+                </div>
+                <div class="p-col-6">
+                    <button type="button" pButton (click)="onReject()" label="No" class="p-button-secondary"></button>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</p-toast>

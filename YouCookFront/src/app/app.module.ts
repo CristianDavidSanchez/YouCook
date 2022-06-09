@@ -23,7 +23,10 @@ import {DataViewModule} from 'primeng/dataview';
 import {InputTextModule} from 'primeng/inputtext';
 
 import {InputMaskModule} from 'primeng/inputmask';
-
+import { ContactenosComponent } from './pages/contactenos/contactenos.component';
+import {InputTextareaModule} from 'primeng/inputtextarea';
+import {ToastModule} from 'primeng/toast';
+import { RippleModule } from 'primeng/ripple';
 
 @NgModule({
   declarations: [
@@ -36,6 +39,7 @@ import {InputMaskModule} from 'primeng/inputmask';
     PlanComponent,
     RecetasComponent,
     PagoComponent,
+    ContactenosComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,7 +54,11 @@ import {InputMaskModule} from 'primeng/inputmask';
     BrowserAnimationsModule,
     DataViewModule,
     InputTextModule,
-    InputMaskModule
+    InputMaskModule,
+    InputTextareaModule,
+    ToastModule,
+    ButtonModule,
+    RippleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

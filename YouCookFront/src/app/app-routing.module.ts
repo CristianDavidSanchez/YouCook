@@ -4,6 +4,7 @@ import { LayoutComponent } from './components/layout/layout.component';
 import { PagoComponent } from './components/pasos/pago/pago.component';
 import { PlanComponent } from './components/pasos/plan/plan.component';
 import { RecetasComponent } from './components/pasos/recetas/recetas.component';
+import { ContactenosComponent } from './pages/contactenos/contactenos.component';
 import { LandingComponent } from './pages/landing/landing.component';
 import { ProcesoComponent } from './pages/proceso/proceso.component';
 
@@ -20,6 +21,10 @@ const routes: Routes = [
       {
         path:'landing',
         component:LandingComponent
+      },
+      {
+        path:'contactenos',
+        component:ContactenosComponent
       },
       {
         path:'proceso',
